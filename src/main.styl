@@ -1,0 +1,465 @@
+@import "../node_modules/reveal.js/css/reveal.css"
+
+$blue--dark = #243342
+$blue--light = #3498db
+$green = #1abc9c
+$silver = #ecf0f1
+$yellow = #ffffcb
+$white = #ffffff
+$black = #000000
+
+$base-font-size = 16px
+$body-font = Raleway, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+$body-font-backup =	"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+$headings-font = $body-font
+$monospace-font =	Menlo, Consolas
+
+$min-width = 400
+$max-width = 800
+$min-width-px = unit($min-width, px)
+$max-width-px = unit($max-width, px)
+$min-font = 16
+$max-font = 22
+$min-font-px = unit($min-font, px)
+$max-font-px = unit($max-font, px)
+
+:root
+  font-size unit($min-font, "px")
+
+@media (min-width: $min-width-px) and (max-width: $max-width-px)
+
+  :root
+    font-size "calc(%s + (%s - %s) * ((100vw - %s) / (%s - %s)))" % (($min-font-px) ($max-font) ($min-font) ($min-width-px) ($max-width) ($min-width))
+
+@media (min-width: $max-width-px)
+
+  :root
+    font-size unit($max-font, "px")
+
+html
+body
+  background $blue--dark
+  background-color $blue--dark
+  color $body-text-colour
+  font-family $body-font-backup
+  font-kerning auto
+  font-weight 300
+  letter-spacing 0.5px
+  text-rendering optimizeLegibility
+  -webkit-font-smoothing subpixel-antialiased
+
+  &.wf-active
+    font-family $body-font
+
+    body
+      font-family $body-font
+body
+  background $blue--dark
+  background-color $blue--dark
+
+.reveal
+  color $silver
+  font-family $body-font
+  font-size 36px
+  font-weight 100
+
+  .slides
+    width 90% !important
+
+::-moz-selection
+  color $white
+  background $green
+  text-shadow none
+
+::selection
+  color $white
+  background $green
+  text-shadow none
+
+.reveal .slides > section
+.reveal .slides > section > section
+  line-height 1.5
+  font-weight inherit
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+
+.reveal
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    color $yellow
+    font-weight 100
+    line-height 1.1
+    margin 0 0 0.5em 0
+    text-transform capitalize
+
+.reveal h1
+  font-size 5.61rem
+
+.reveal h2
+  font-size 4.209rem
+
+.reveal h3
+  font-size 3.157rem
+
+.reveal h4
+  font-size 2.369rem
+
+.reveal h5
+  font-size 1.777rem
+
+.reveal h6
+  font-size 1.333rem
+  font-weight 600
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p
+  margin 20px 0
+  line-height 1.5
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img
+.reveal video
+.reveal iframe
+  max-width 95%
+  max-height 95%
+
+.reveal strong
+.reveal b
+  font-weight bold
+
+.reveal em
+  font-style italic
+
+.reveal ol
+.reveal dl
+.reveal ul
+  display inline-block
+  text-align left
+  margin 0 0 0 1em
+
+.reveal ol
+  list-style-type decimal
+
+.reveal ul
+  list-style-position outside
+  list-style-type disc
+
+.reveal ul ul
+  list-style-type square
+
+.reveal ul ul ul
+  list-style-type circle
+
+.reveal ul ul
+.reveal ul ol
+.reveal ol ol
+.reveal ol ul
+  display block
+  margin-left 10px
+
+.reveal dt
+  font-weight bold
+
+.reveal dd
+  margin-left 40px
+
+.reveal q
+.reveal blockquote
+  quotes none
+
+.reveal blockquote
+  display block
+  position relative
+  width 70%
+  margin 20px auto
+  padding 5px
+  font-style italic
+  background rgba($white, 0.05)
+  box-shadow 0px 0px 2px rgba($black, 0.2)
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child
+  display inline-block
+
+.reveal q
+  font-style italic
+
+.reveal pre
+  display block
+  position relative
+  width 90%
+  margin 20px auto
+  text-align left
+  font-size 0.55em
+  font-family monospace
+  line-height 1.2em
+  word-wrap break-word
+  box-shadow 0px 0px 6px rgba($black, 0.3)
+
+.reveal code
+  font-family monospace
+
+.reveal pre code
+  display block
+  padding 5px
+  overflow auto
+  max-height 400px
+  word-wrap normal
+
+.reveal table
+  margin auto
+  border-collapse collapse
+  border-spacing 0
+
+.reveal table th
+  font-weight bold
+
+.reveal table th
+.reveal table td
+  text-align left
+  padding 0.2em 0.5em 0.2em 0.5em
+  border-bottom 1px solid
+
+.reveal table th[align="center"]
+.reveal table td[align="center"]
+  text-align center
+
+.reveal table th[align="right"]
+.reveal table td[align="right"]
+  text-align right
+
+.reveal table tbody tr:last-child th
+.reveal table tbody tr:last-child td
+  border-bottom none
+
+.reveal sup
+  vertical-align super
+
+.reveal sub
+  vertical-align sub
+
+.reveal small
+  display inline-block
+  font-size 0.6em
+  line-height 1.2em
+  vertical-align baseline
+
+.reveal small *
+  vertical-align baseline
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a
+  color $yellow
+  text-decoration none
+  transition color .15s ease
+
+.reveal a:hover
+  color $green
+  text-shadow none
+  border none
+
+.reveal .roll span:after
+  color #fff
+  background $green
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img
+  margin 15px 0px
+  background rgba($white, 0.12)
+  border 4px solid $silver
+  box-shadow 0 0 10px rgba($black, 0.15)
+
+.reveal section img.plain
+  border 0
+  box-shadow none
+
+.reveal a img
+  -webkit-transition all .15s linear
+  transition all .15s linear
+
+.reveal a:hover img
+  background rgba($white, 0.2)
+  border-color $green
+  box-shadow 0 0 20px rgba($black, 0.55)
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled
+  border-right-color darken($blue--dark, 25%)
+
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled
+  border-left-color darken($blue--dark, 25%)
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled
+  border-bottom-color darken($blue--dark, 25%)
+
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled
+  border-top-color darken($blue--dark, 25%)
+
+.reveal .controls .navigate-left.enabled:hover
+  border-right-color $blue--light
+
+.reveal .controls .navigate-right.enabled:hover
+  border-left-color $blue--light
+
+.reveal .controls .navigate-up.enabled:hover
+  border-bottom-color $blue--light
+
+.reveal .controls .navigate-down.enabled:hover
+  border-top-color $blue--light
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress
+  background darken($blue--dark, 50%)
+
+.reveal .progress span
+  background $yellow
+  -webkit-transition width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985)
+  transition width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985)
+
+/*********************************************
+ * COMPONENTS
+ *********************************************/
+
+.reveal
+
+  .c-further-reading
+    border-top 1px dotted rgba($blue--light, 0.5)
+    font-size 0.85rem
+    text-align left
+
+  .c-inline-link
+    relative()
+    color $yellow
+    font-weight 500
+    perspective 600px
+    perspective-origin 50% 100%
+    text-decoration none
+    transition all 0.2s ease-in-out
+    white-space nowrap
+
+    &:before,
+    &:after
+      box-sizing content-box
+      content ""
+      height 100%
+      left -4px
+      padding 0 4px
+      position absolute
+      top 0
+      width 100%
+      z-index -1
+
+    &:before
+      background-color $yellow
+      transform rotateX(90deg)
+      transform-origin 50% 100%
+      transition transform 0.2s
+      transition-timing-function cubic-bezier(0.7,0,0.3,1)
+
+    &:after
+      border-bottom 1px solid $yellow
+
+    &:active
+    &:focus
+    &:hover
+      color $blue--dark
+
+      &:before
+        transform rotateX(0deg)
+
+  .c-read-more
+    font-size 0.85em
+
+  .c-arrow
+    animation bounce 1s infinite
+    background-image url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=")
+    background-size contain
+    bottom -60px
+    height 40px
+    left 50%
+    margin-left -20px
+    position fixed
+    width 40px
+
+@keyframes bounce
+	0%, 20%, 50%, 80%, 100%
+    transform translateY(0)
+	40%
+    transform translateY(-30px)
+	60%
+    transform translateY(-15px)
+
+/*********************************************
+ * UTILITIES
+ *********************************************/
+
+.reveal
+
+  .u-double-side-margin
+    margin 0 2rem
+
+  .u-flex
+    align-items flex-start
+    display flex
+    justify-content center
+
+    > *
+      width 100%
+
+      @media (min-width: 768px)
+        width 33.33%
+
+  .u-float
+
+    &--left
+      float left
+
+  .u-inline-block
+    display inline-block
+
+  .u-margin
+    margin 1.5rem
+
+    &--bottom
+      margin-bottom 1.5rem
+
+    &--left
+      margin-left 1.5rem
+
+    &--right
+      margin-right 1.5rem
+
+    &--top
+      margin-top 1.5rem
+
+  .u-no-margin
+    margin 0
+
+  .u-small
+    font-size 0.85rem
+
+  .u-subheader
+    display block
+    font-size 0.4em
+    font-weight 300
+    margin 0.5em 0
