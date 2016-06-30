@@ -98,6 +98,18 @@ body
     margin 0 0 0.5em 0
     text-transform capitalize
 
+.reveal
+  [data-background-image]
+    background rgba($white, 0.5)
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+      color $black
+
 .reveal h1
   font-size 5.61rem
 
@@ -153,6 +165,7 @@ body
   list-style-type disc
 
 .reveal ul ul
+  padding-left 2rem
   list-style-type square
 
 .reveal ul ul ul
@@ -345,6 +358,7 @@ body
   .c-further-reading
     border-top 1px dotted rgba($blue--light, 0.5)
     font-size 0.85rem
+    margin-top 2rem
     text-align left
 
   .c-inline-link
@@ -414,6 +428,9 @@ body
  *********************************************/
 
 .reveal
+
+  .u-align--left
+    text-align left
 
   .u-double-side-margin
     margin 0 2rem

@@ -1411,6 +1411,17 @@ body {
   margin: 0 0 0.5em 0;
   text-transform: capitalize;
 }
+.reveal [data-background-image] {
+  background: rgba(255,255,255,0.5);
+}
+.reveal [data-background-image] h1,
+.reveal [data-background-image] h2,
+.reveal [data-background-image] h3,
+.reveal [data-background-image] h4,
+.reveal [data-background-image] h5,
+.reveal [data-background-image] h6 {
+  color: #000;
+}
 .reveal h1 {
   font-size: 5.61rem;
 }
@@ -1466,6 +1477,7 @@ body {
   list-style-type: disc;
 }
 .reveal ul ul {
+  padding-left: 2rem;
   list-style-type: square;
 }
 .reveal ul ul ul {
@@ -1656,6 +1668,7 @@ body {
 .reveal .c-further-reading {
   border-top: 1px dotted rgba(52,152,219,0.5);
   font-size: 0.85rem;
+  margin-top: 2rem;
   text-align: left;
 }
 .reveal .c-inline-link {
@@ -1727,6 +1740,9 @@ body {
 /*********************************************
  * UTILITIES
  *********************************************/
+.reveal .u-align--left {
+  text-align: left;
+}
 .reveal .u-double-side-margin {
   margin: 0 2rem;
 }
