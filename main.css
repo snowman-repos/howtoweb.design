@@ -1678,6 +1678,19 @@ body {
 /*********************************************
  * COMPONENTS
  *********************************************/
+.reveal .c-button {
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  box-shadow: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+}
 .reveal .c-further-reading {
   border-top: 1px dotted rgba(52,152,219,0.5);
   font-size: 0.85rem;
