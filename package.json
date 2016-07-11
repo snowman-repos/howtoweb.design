@@ -30,7 +30,7 @@
   "scripts": {
     "compile": "jade ./src/index.jade --out ./ && stylus ./src/main.styl --out ./ --include-css && autoprefixer-cli -o ./main.css ./main.css && cssnano ./main.css ./main.min.css && browserify ./src/main.js --o ./main.js -t [ babelify --presets [ es2015 ] ] && uglifyjs ./main.js -o ./main.min.js",
     "serve": "npm start && python -m SimpleHTTPServer",
-    "start": "NODE_ENV=production && pm2 start server.js --name howtoweb.design"
+    "start": "NODE_ENV=production && pm2 restart server.js --name howtoweb.design"
   },
   "version": "1.0.0"
 }

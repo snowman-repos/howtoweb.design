@@ -4762,6 +4762,7 @@ var Popup = function () {
     this.el = {
       closeButton: el.querySelector('.js-popup__close-button'),
       curtain: el.querySelector('.js-popup__curtain'),
+      navigationLinks: document.querySelectorAll('.js-navigation-link'),
       popup: el
     };
 
@@ -4772,6 +4773,8 @@ var Popup = function () {
     key: 'addEventListeners',
     value: function addEventListeners() {
       var _this = this;
+
+      var self = this;
 
       this.el.closeButton.addEventListener('click', function (e) {
 
@@ -4789,6 +4792,16 @@ var Popup = function () {
 
         _this.handleKeypress(e);
       }, false);
+
+      console.log(this.el.navigationLinks);
+
+      for (var i = 0; i < this.el.navigationLinks.length; i++) {
+
+        this.el.navigationLinks[i].addEventListener('click', function (e) {
+          console.log('clicked');
+          self.closePopup();
+        });
+      }
     }
   }, {
     key: 'closePopup',

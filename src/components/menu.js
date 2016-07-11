@@ -5,6 +5,7 @@ class Popup {
     this.el = {
       closeButton: el.querySelector('.js-popup__close-button'),
       curtain: el.querySelector('.js-popup__curtain'),
+      navigationLinks: document.querySelectorAll('.js-navigation-link'),
       popup: el
     }
 
@@ -13,6 +14,8 @@ class Popup {
   }
 
   addEventListeners() {
+
+    var self = this;
 
     this.el.closeButton.addEventListener('click', (e) => {
 
@@ -33,6 +36,14 @@ class Popup {
       this.handleKeypress(e);
 
     }, false);
+
+    for(var i = 0; i < this.el.navigationLinks.length; i++) {
+
+      this.el.navigationLinks[i].addEventListener('click', function(e) {
+        self.closePopup();
+      });
+
+    }
 
   }
 
