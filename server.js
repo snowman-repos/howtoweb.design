@@ -7,6 +7,7 @@ var cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');
 var path = require('path');
 var server = require('http').createServer(app);
+var stripe = require('stripe')('pk_live_102DFGBPzfPJw3yapvo2fSs6');
 
 // Config
 

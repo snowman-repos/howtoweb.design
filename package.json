@@ -1,7 +1,9 @@
 {
   "author": "Darryl Snow",
   "dependencies": {
-    "reveal.js": "^3.3.0"
+    "reveal.js": "^3.3.0",
+    "stripe": "^4.7.0",
+    "whatwg-fetch": "^1.0.0"
   },
   "description": "A presentation for remote design teams outlining best practice design deliverables required for front-end development",
   "devDependencies": {
