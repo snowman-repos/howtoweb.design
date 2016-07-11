@@ -8,6 +8,12 @@ Happily accept pull requests.
 
 Please submit a pull request with updates to the slides. We can discuss the merits of your changes in the comments thread for the pull request.
 
+Things I'm really looking for are:
+* translations
+* content updates
+* design improvements
+* grammar, punctuation, and spelling fixes
+
 ## Change log
 
 #### 1.0.0 - 2016-06-27
