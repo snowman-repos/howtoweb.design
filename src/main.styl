@@ -7,6 +7,8 @@ $silver = #ecf0f1
 $yellow = #ffffcb
 $white = #ffffff
 $grey--dark = #222222
+$grey--medium = #666666
+$grey--light = #cccccc
 $black = #000000
 
 $base-font-size = 16px
@@ -366,20 +368,147 @@ body
  * COMPONENTS
  *********************************************/
 
-.reveal
+.c-button
+  background none
+  border 2px solid $white
+  border-radius 0.3em
+  box-shadow none
+  color $white
+  cursor pointer
+  display inline-block
+  font-size 0.6em
+  font-weight 600
+  opacity 0.5
+  padding 0.75em 1.25em
+  text-transform uppercase
+  transition 0.2s all ease-in-out
 
-  .c-button
-    background none
-    border 2px solid $white
-    border-radius 3px
-    box-shadow none
-    color $white
-    cursor pointer
+  &:active
+  &:focus
+  &:hover
+    color $green
+    opacity 1
+
+  &--small
+    font-size 0.4em
+
+  &--dark
+    border-color $grey--dark
+    color $grey--dark
+
+    &:active
+    &:focus
+    &:hover
+      border-color $grey--dark
+      color $blue--dark
+
+.c-popup
+  height 100%
+  left 0
+  pointer-events none
+  position fixed
+  top 0
+  width 100%
+  z-index 1000
+
+  &__toggle
+    display block
+    position absolute
+    right 1em
+    top 1em
+    z-index 999
+
+  &__curtain
+    background rgba($black, 0.75)
+    content ""
+    display block
+    height 100%
+    left 0
+    opacity 0
+    position absolute
+    top 0
+    transition 0.2s all ease-in-out
+    width 100%
+
+  &__content
+    background $white
+    box-sizing border-box
+    color $grey--medium
+    height 80vh
+    left 10vw
+    opacity 0
+    overflow-y scroll
+    padding 2rem
+    position absolute
+    top 10vh
+    transform rotateX(-90deg)
+    transition 0.2s all ease-in-out
+    width 80vw
+
+  &.is-shown
+    pointer-events auto
+
+    .c-popup__curtain
+      opacity 1
+
+    .c-popup__content
+      opacity 1
+      transform rotateX(0)
+      transition 0.2s 0.2s all ease-in-out
+
+.c-menu-header
+  font-weight 600
+  text-transform capitalize
+
+.c-divider
+  background $silver
+  height 1px
+  margin 0 0 2rem 0
+  width 100%
+
+.c-navigation
+  font-size 0.8em
+
+  &__submenu
+    margin 0
+
+  a
+    color $grey--medium
+    border-bottom 1px dotted $grey--light
+    display block
+    padding 0.5em 0
+    position relative
+    text-decoration none
+    text-transform capitalize
+    transition 0.2s all ease-in-out
+
+    &:active
+    &:focus
+    &:hover
+      color $green
+
+    &:after
+      content attr(data-slide)
+      font-size 0.75em
+      position absolute
+      right 0
+      top 50%
+      transform translateY(-50%)
+
+.c-keyboard-shortcuts
+
+  dt
     display inline-block
-    font-size 0.8em
-    font-weight 600
-    padding 0.5em 1em
-    text-transform uppercase
+    width 30%
+
+  dd
+    box-sizing border-box
+    display inline-block
+    margin 0 0 1rem -4px
+    padding-left 2rem
+    width 70%
+
+.reveal
 
   .c-further-reading
     border-top 1px dotted rgba($blue--light, 0.5)

@@ -4745,6 +4745,132 @@
 }));
 
 },{}],2:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Popup = function () {
+  function Popup(el) {
+    _classCallCheck(this, Popup);
+
+    this.el = {
+      closeButton: el.querySelector('.js-popup__close-button'),
+      curtain: el.querySelector('.js-popup__curtain'),
+      popup: el
+    };
+
+    this.addEventListeners();
+  }
+
+  _createClass(Popup, [{
+    key: 'addEventListeners',
+    value: function addEventListeners() {
+      var _this = this;
+
+      this.el.closeButton.addEventListener('click', function (e) {
+
+        e.preventDefault();
+
+        _this.closePopup();
+      });
+
+      this.el.curtain.addEventListener('click', function () {
+
+        _this.closePopup();
+      });
+
+      document.addEventListener('keyup', function (e) {
+
+        _this.handleKeypress(e);
+      }, false);
+    }
+  }, {
+    key: 'closePopup',
+    value: function closePopup() {
+
+      this.el.popup.classList.remove('is-shown');
+    }
+  }, {
+    key: 'handleKeypress',
+    value: function handleKeypress(e) {
+
+      e = e || window.event;
+
+      var isEscape = false;
+
+      if ('key' in e) {
+        isEscape = e.key == 'Escape';
+      } else {
+        isEscape = e.keyCode == 27;
+      }
+
+      if (isEscape) {
+        this.closePopup();
+      }
+
+      if (e.ctrlKey && e.keyCode == 191) {
+
+        this.openPopup();
+      }
+    }
+  }, {
+    key: 'openPopup',
+    value: function openPopup() {
+
+      this.el.popup.classList.add('is-shown');
+    }
+  }]);
+
+  return Popup;
+}();
+
+var Popups = function () {
+  function Popups() {
+    _classCallCheck(this, Popups);
+
+    var popupComponents = document.querySelectorAll('.js-popup');
+
+    this.openButtons = document.querySelectorAll('.js-popup__open-button');
+
+    this.popups = [];
+
+    for (var i = 0; i < popupComponents.length; i++) {
+
+      this.popups.push(new Popup(popupComponents[i]));
+    }
+
+    this.addEventListeners();
+  }
+
+  _createClass(Popups, [{
+    key: 'addEventListeners',
+    value: function addEventListeners() {
+      var _this2 = this;
+
+      for (var i = 0; i < this.openButtons.length; i++) {
+
+        this.openButtons[i].addEventListener('click', function (e) {
+
+          e.preventDefault();
+
+          _this2.popups[e.target.dataset.popup].openPopup();
+        });
+      }
+    }
+  }]);
+
+  return Popups;
+}();
+
+exports.default = new Popups();
+
+},{}],3:[function(require,module,exports){
 "use strict";
 
 var _reveal = require("reveal.js");
@@ -4756,10 +4882,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // More info https://github.com/hakimel/reveal.js#configuration
 _reveal2.default.initialize({
   controls: true,
+  keyboard: {
+    27: null
+  },
   progress: true,
   history: true,
   center: true,
+  transition: 'slide' // none/fade/slide/convex/concave/zoom
+});
 
-  transition: 'slide' });
+},{"reveal.js":1}],4:[function(require,module,exports){
+'use strict';
 
-},{"reveal.js":1}]},{},[2]);
+var menu = require('./components/menu');
+var presentation = require('./components/presentation');
+
+},{"./components/menu":2,"./components/presentation":3}]},{},[4]);

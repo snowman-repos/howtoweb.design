@@ -1678,18 +1678,151 @@ body {
 /*********************************************
  * COMPONENTS
  *********************************************/
-.reveal .c-button {
+.c-button {
   background: none;
   border: 2px solid #fff;
-  border-radius: 3px;
+  border-radius: 0.3em;
   box-shadow: none;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 0.8em;
+  font-size: 0.6em;
   font-weight: 600;
-  padding: 0.5em 1em;
+  opacity: 0.5;
+  padding: 0.75em 1.25em;
   text-transform: uppercase;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+.c-button:active,
+.c-button:focus,
+.c-button:hover {
+  color: #1abc9c;
+  opacity: 1;
+}
+.c-button--small {
+  font-size: 0.4em;
+}
+.c-button--dark {
+  border-color: #222;
+  color: #222;
+}
+.c-button--dark:active,
+.c-button--dark:focus,
+.c-button--dark:hover {
+  border-color: #222;
+  color: #243342;
+}
+.c-popup {
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.c-popup__toggle {
+  display: block;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 999;
+}
+.c-popup__curtain {
+  background: rgba(0,0,0,0.75);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+  width: 100%;
+}
+.c-popup__content {
+  background: #fff;
+  box-sizing: border-box;
+  color: #666;
+  height: 80vh;
+  left: 10vw;
+  opacity: 0;
+  overflow-y: scroll;
+  padding: 2rem;
+  position: absolute;
+  top: 10vh;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+  width: 80vw;
+}
+.c-popup.is-shown {
+  pointer-events: auto;
+}
+.c-popup.is-shown .c-popup__curtain {
+  opacity: 1;
+}
+.c-popup.is-shown .c-popup__content {
+  opacity: 1;
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+  -webkit-transition: 0.2s 0.2s all ease-in-out;
+  transition: 0.2s 0.2s all ease-in-out;
+}
+.c-menu-header {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.c-divider {
+  background: #ecf0f1;
+  height: 1px;
+  margin: 0 0 2rem 0;
+  width: 100%;
+}
+.c-navigation {
+  font-size: 0.8em;
+}
+.c-navigation__submenu {
+  margin: 0;
+}
+.c-navigation a {
+  color: #666;
+  border-bottom: 1px dotted #ccc;
+  display: block;
+  padding: 0.5em 0;
+  position: relative;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+.c-navigation a:active,
+.c-navigation a:focus,
+.c-navigation a:hover {
+  color: #1abc9c;
+}
+.c-navigation a:after {
+  content: attr(data-slide);
+  font-size: 0.75em;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.c-keyboard-shortcuts dt {
+  display: inline-block;
+  width: 30%;
+}
+.c-keyboard-shortcuts dd {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0 0 1rem -4px;
+  padding-left: 2rem;
+  width: 70%;
 }
 .reveal .c-further-reading {
   border-top: 1px dotted rgba(52,152,219,0.5);

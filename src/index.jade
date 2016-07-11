@@ -26,478 +26,664 @@ html(lang="en")
     link(rel="preconnect", crossorigin, href="https://fonts.googleapis.com/css?family=Raleway:100,300,600")
 
   body
+
+    button.c-button.c-button--small.c-popup__toggle.js-popup__open-button(data-popup="0", type="button") menu
+
+    .c-popup.js-popup
+
+      .c-popup__curtain.js-popup__curtain
+
+      .c-popup__content
+
+        button.c-button.c-button-small.c-button--dark.c-popup__toggle.js-popup__close-button(type="button") close
+
+        p.c-menu-header Keyboard shortcuts
+
+        dl.c-keyboard-shortcuts
+          dt Ctrl + /
+          dd Open menu
+          dt ESC
+          dd Close menu
+          dt &larr;
+          dd Previous Slide
+          dt &rarr;
+          dd Next Slide
+
+        .c-divider
+        
+        p.c-menu-header Slides
+
+        nav.c-navigation
+          li
+            a(data-slide="1", href="/#/introduction", title="Go to the Introduction slide") Introduction
+            ul.c-navigation__submenu
+              li
+                a(data-slide="1.1", href="/#/what-this-is", title="Go to the 'What this is' slide") What This Is
+              li
+                a(data-slide="1.2", href="/#/what-this-isnt", title="Go to the 'What this isn't' slide") What This Isn't
+              li
+                a(data-slide="1.3", href="/#/who-this-is-for", title="Go to the 'Who this is for' slide") Who this is For
+          li
+            a(data-slide="2", href="/#/what-is-design", title="Go to the 'What is design' slide") What is Design?
+            ul.c-navigation__submenu
+              li
+                a(data-slide="2.1", href="/#/what-about-graphic-design", title="Go to the 'What about graphic design' slide") What About Graphic Design
+              li
+                a(data-slide="2.2", href="/#/what-is-a-web-project", title="Go to the 'What is a web project' slide") What is a Web Project?
+              li
+                a(data-slide="2.3", href="/#/what-is-web-design-1", title="Go to the 'What is web design' slide") What is Web Design?
+          li
+            a(data-slide="3", href="/#/web-design-challenges", title="Go to the 'Web design challenges' slide") Web Design Challenges
+            ul.c-navigation__submenu
+              li
+                a(data-slide="3.1", href="/#/pace-of-change-1", title="Go to the 'Pace of change' slide") The Pace of Change
+              li
+                a(data-slide="3.2", href="/#/code-constraints-1", title="Go to the 'Code constraints' slide") Code Constraints
+              li
+                a(data-slide="3.3", href="/#/unlimited-canvas-1", title="Go to the 'Unlimited canvas' slide") Unlimited Canvas
+              li
+                a(data-slide="3.4", href="/#/interactivity-1", title="Go to the 'Interactivity' slide") Interactivity
+              li
+                a(data-slide="3.5", href="/#/content-1", title="Go to the 'Content' slide") Content
+              li
+                a(data-slide="3.6", href="/#/user-context-1", title="Go to the 'User context' slide") User Context
+              li
+                a(data-slide="3.7", href="/#/performance-1", title="Go to the 'Performance' slide") Performance
+              li
+                a(data-slide="3.8", href="/#/typography-1", title="Go to the 'Typography' slide") Typography
+              li
+                a(data-slide="3.9", href="/#/device-resolution", title="Go to the 'Device resolution' slide") Device Resolution
+          li
+            a(data-slide="4", href="/#/who-are-we-designing-for", title="Go to the 'Who are we desinging for' slide") Who are We Designing For?
+            ul.c-navigation__submenu
+              li
+                a(data-slide="4.1", href="/#/project-owners-1", title="Go to the 'Clients and project managers' slide") Clients and Project Owners
+                ul.c-navigation__submenu
+                  li
+                    a(data-slide="4.1.1", href="/#/how-to-present-ideas-1", title="Go to the 'How to present ideas' slide") How to Present Ideas
+              li
+                a(data-slide="4.2", href="/#/developers-1", title="Go to the 'Developers' slide") Developers
+              li
+                a(data-slide="4.3", href="/#/users-1", title="Go to the 'Users' slide") Users
+              li
+                a(data-slide="4.3", href="/#/machines", title="Go to the 'Machinese' slide") Machines
+                ul.c-navigation__submenu
+                  li
+                    a(data-slide="4.3.1", href="/#/seo", title="Go to the 'SEO' slide") SEO
+                  li
+                    a(data-slide="4.3.2", href="/#/rich-snippets-and-meta-data", title="Go to the 'Rich snippets and meta data' slide") Rich Snippets and Meta Data
+          li
+            a(data-slide="5", href="/#/the-web-design-process-1", title="Go to the 'Web design process' slide") The Web Design Process
+            ul.c-navigation__submenu
+              li
+                a(data-slide="5.1", href="/#/collaboration-1", title="Go to the 'Collaboration' slide") Collaboration
+                ul.c-navigation__submenu
+                  li
+                    a(data-slide="5.1.1", href="/#/empathy", title="Go to the 'Empathy' slide") Empathy
+              li
+                a(data-slide="5.2", href="/#/embracing-change", title="Go to the 'Embracing change' slide") Embracing Change
+              li
+                a(data-slide="5.3", href="/#/iteration-1", title="Go to the 'Iteration' slide") Iteration
+              li
+                a(data-slide="5.4", href="/#/incremental-design-1", title="Go to the 'Incremental design' slide") Incremenetal Design
+              li
+                a(data-slide="5.5", href="/#/accessibility-1", title="Go to the 'Accessibility' slide") Accessibility
+              li
+                a(data-slide="5.6", href="/#/mood-boards-1", title="Go to the 'Mood boards' slide") Mood Boards
+              li
+                a(data-slide="5.7", href="/#/wireframes-1", title="Go to the 'Wireframes' slide") Wireframes
+              li
+                a(data-slide="5.8", href="/#/colours-1", title="Go to the 'Colours' slide") Colours
+              li
+                a(data-slide="5.9", href="/#/typography", title="Go to the 'Typography' slide") Typography
+                ul.c-navigation__submenu
+                  li
+                    a(data-slide="5.9.1", href="/#/typefaces-1", title="Go to the 'Typefaces' slide") Typefaces
+                  li
+                    a(data-slide="5.9.2", href="/#/font-styles-1", title="Go to the 'Font styles' slide") Font Styles
+                  li
+                    a(data-slide="5.9.3", href="/#/base-font-size-1", title="Go to the 'Base font size' slide") Base Font Size
+                  li
+                    a(data-slide="5.9.4", href="/#/other-font-sizes-1", title="Go to the 'Other font sizes' slide") Other Font Sizes
+                  li
+                    a(data-slide="5.9.5", href="/#/baseline-grid-1", title="Go to the 'Baseline grid' slide") Baseline Grid
+                  li
+                    a(data-slide="5.9.6", href="/#/typographic-hierarchy-1", title="Go to the 'Typographic hierarchy' slide") Typographic Hierarchy
+                  li
+                    a(data-slide="5.9.7", href="/#/base-typographic-styles-1", title="Go to the 'Base typographic styles' slide") Base Typographic Styles
+                    ul.c-navigation__submenu
+                      li
+                        a(data-slide="5.9.7.1", href="/#/headers-1", title="Go to the 'Headers' slide") Headers
+                  li
+                    a(data-slide="5.9.8", href="/#/typography-for-custom-components-1", title="Go to the 'Typography for custom components' slide") Typography for Custom Components
+              li
+                a(data-slide="5.10", href="/#/grid-1", title="Go to the 'Grid' slide") Grid
+              li
+                a(data-slide="5.11", href="/#/images-1", title="Go to the 'Images' slide") Images
+                ul.c-navigation__submenu
+                  li
+                    a(data-slide="5.11.1", href="/#/art-direction-1", title="Go to the 'Art direction' slide") Art Direction
+              li
+                a(data-slide="5.12", href="/#/icons-1", title="Go to the 'Icons' slide") Icons
+              li
+                a(data-slide="5.13", href="/#/base-element-styles-1", title="Go to the 'Base element styles' slide") Base Element Styles
+              li
+                a(data-slide="5.14", href="/#/custom-components-1", title="Go to the 'Custom components' slide") Custom Components
+              li
+                a(data-slide="5.15", href="/#/style-tiles-1", title="Go to the 'Style tiles' slide") Style Tiles
+              li
+                a(data-slide="5.16", href="/#/animation-1", title="Go to the 'Animation' slide") Animation
+              li
+                a(data-slide="5.17", href="/#/print-styles-1", title="Go to the 'Print styles' slide") Print Styles
+              li
+                a(data-slide="5.18", href="/#/tools-1", title="Go to the 'Tools' slide") Tools
+          li
+            a(data-slide="6", href="/#/web-design-deliverables-1", title="Go to the 'Web design deliverables' slide") Web Design Deliverables
+            ul.c-navigation__submenu
+              li
+                a(data-slide="6.1", href="/#/the-advantages-of-a-design-style-guide-1", title="Go to the 'Advantages of a design style guide' slide") The Advantages of a Design Style Guide
+          li
+            a(data-slide="7", href="/#/web-design-pitfalls-1", title="Go to the 'Web design pitfalls' slide") Web Design Pitfalls
+            ul.c-navigation__submenu
+              li
+                a(data-slide="7.1", href="/#/language-and-communication-issues-1", title="Go to the 'Language and communication issues' slide") Language &amp; Communication Issues
+              li
+                a(data-slide="7.2", href="/#/large-high-fidelity-mockups", title="Go to the 'Large high fidelity mockups' slide") Large High Fidelity Mockups
+                ul.c-navigation__submenu
+                  li
+                    a(data-slide="7.2.1", href="/#/why-full-page-mockups-are-bad-1", title="Go to the 'Why full page mockups are bad' slide") Why Full Page Mockups are Bad
+              li
+                a(data-slide="7.3", href="/#/fixed-sizes-1", title="Go to the 'Fixed sizes' slide") Fixed Sizes
+          li
+            a(data-slide="8", href="/#/what-next-1", title="Go to the 'What next' slide") What Next?
+          li
+            a(data-slide="9", href="/#/summary-1", title="Go to the 'Summary' slide") Summary
+            ul.c-navigation__submenu
+              li
+                a(data-slide="9.1", href="/#/thanks", title="Go to the 'Thanks' slide") Thanks
+              li
+                a(data-slide="9.2", href="/#/how-to-contribute", title="Go to the 'How to contribute' slide") How to Contribute
+
     .reveal
       .slides
         section#introduction
-          include slides/1
+          include slides--en/1
+        section#what-this-is
+          include slides--en/2
+        section#what-this-isnt
+          include slides--en/3
+        section#who-this-is-for
+          include slides--en/4
         section#what-is-design
-          include slides/what-is-design/1
+          include slides--en/what-is-design/1
         section#what-about-graphic-design
-          include slides/what-is-design/what-about-graphic-design/1
+          include slides--en/what-is-design/what-about-graphic-design/1
         section#what-is-a-web-project
-          include slides/what-is-design/what-is-a-web-project/1
+          include slides--en/what-is-design/what-is-a-web-project/1
         section#what-is-web-design-1
-          include slides/what-is-design/what-is-web-design/1
+          include slides--en/what-is-design/what-is-web-design/1
         section#what-is-web-design-2
-          include slides/what-is-design/what-is-web-design/2
+          include slides--en/what-is-design/what-is-web-design/2
         section#what-is-web-design-3
-          include slides/what-is-design/what-is-web-design/3
+          include slides--en/what-is-design/what-is-web-design/3
         section#what-is-web-design-4
-          include slides/what-is-design/what-is-web-design/4
+          include slides--en/what-is-design/what-is-web-design/4
         section#what-is-web-design-5
-          include slides/what-is-design/what-is-web-design/5
+          include slides--en/what-is-design/what-is-web-design/5
         section#what-is-web-design-6
-          include slides/what-is-design/what-is-web-design/6
+          include slides--en/what-is-design/what-is-web-design/6
         section#what-is-web-design-7
-          include slides/what-is-design/what-is-web-design/7
+          include slides--en/what-is-design/what-is-web-design/7
         section#web-design-challenges
-          include slides/web-design-challenges/1
+          include slides--en/web-design-challenges/1
         section#pace-of-change-1
-          include slides/web-design-challenges/pace-of-change/1
+          include slides--en/web-design-challenges/pace-of-change/1
         section#pace-of-change-2
-          include slides/web-design-challenges/pace-of-change/2
+          include slides--en/web-design-challenges/pace-of-change/2
         section#code-constraints-1
-          include slides/web-design-challenges/code-constraints/1
+          include slides--en/web-design-challenges/code-constraints/1
         section#code-constraints-2
-          include slides/web-design-challenges/code-constraints/2
+          include slides--en/web-design-challenges/code-constraints/2
         section#code-constraints-3
-          include slides/web-design-challenges/code-constraints/3
+          include slides--en/web-design-challenges/code-constraints/3
         section#code-constraints-4
-          include slides/web-design-challenges/code-constraints/4
+          include slides--en/web-design-challenges/code-constraints/4
         section#code-constraints-5
-          include slides/web-design-challenges/code-constraints/5
+          include slides--en/web-design-challenges/code-constraints/5
         section#code-constraints-6
-          include slides/web-design-challenges/code-constraints/6
+          include slides--en/web-design-challenges/code-constraints/6
         section#unlimited-canvas-1
-          include slides/web-design-challenges/unlimited-canvas/1
+          include slides--en/web-design-challenges/unlimited-canvas/1
         section#unlimited-canvas-2
-          include slides/web-design-challenges/unlimited-canvas/2
+          include slides--en/web-design-challenges/unlimited-canvas/2
         section#unlimited-canvas-3
-          include slides/web-design-challenges/unlimited-canvas/3
+          include slides--en/web-design-challenges/unlimited-canvas/3
         section#interactivity-1
-          include slides/web-design-challenges/interactivity/1
+          include slides--en/web-design-challenges/interactivity/1
         section#interactivity-2
-          include slides/web-design-challenges/interactivity/2
+          include slides--en/web-design-challenges/interactivity/2
         section#interactivity-3
-          include slides/web-design-challenges/interactivity/3
+          include slides--en/web-design-challenges/interactivity/3
         section#content-1
-          include slides/web-design-challenges/content/1
+          include slides--en/web-design-challenges/content/1
         section#content-2
-          include slides/web-design-challenges/content/2
+          include slides--en/web-design-challenges/content/2
         section#user-context-1
-          include slides/web-design-challenges/user-context/1
+          include slides--en/web-design-challenges/user-context/1
         section#user-context-2
-          include slides/web-design-challenges/user-context/2
+          include slides--en/web-design-challenges/user-context/2
         section#user-context-3
-          include slides/web-design-challenges/user-context/3
+          include slides--en/web-design-challenges/user-context/3
         section#user-context-4
-          include slides/web-design-challenges/user-context/4
+          include slides--en/web-design-challenges/user-context/4
         section#performance-1
-          include slides/web-design-challenges/performance/1
+          include slides--en/web-design-challenges/performance/1
         section#performance-2
-          include slides/web-design-challenges/performance/2
+          include slides--en/web-design-challenges/performance/2
         section#performance-3
-          include slides/web-design-challenges/performance/3
+          include slides--en/web-design-challenges/performance/3
         section#typography-1
-          include slides/web-design-challenges/typography/1
+          include slides--en/web-design-challenges/typography/1
         section#typography-2
-          include slides/web-design-challenges/typography/2
+          include slides--en/web-design-challenges/typography/2
         section#device-resolution
-          include slides/web-design-challenges/device-resolution/1
+          include slides--en/web-design-challenges/device-resolution/1
         section#who-are-we-designing-for
-          include slides/who-are-we-designing-for/1
+          include slides--en/who-are-we-designing-for/1
         section#project-owners-1
-          include slides/who-are-we-designing-for/clients-and-project-owners/1
+          include slides--en/who-are-we-designing-for/clients-and-project-owners/1
         section#project-owners-2
-          include slides/who-are-we-designing-for/clients-and-project-owners/2
+          include slides--en/who-are-we-designing-for/clients-and-project-owners/2
         section#how-to-present-ideas-1
-          include slides/who-are-we-designing-for/clients-and-project-owners/how-to-present-ideas/1
+          include slides--en/who-are-we-designing-for/clients-and-project-owners/how-to-present-ideas/1
         section#how-to-present-ideas-2(data-background-image="/images/meeting1.jpg")
-          include slides/who-are-we-designing-for/clients-and-project-owners/how-to-present-ideas/2
+          include slides--en/who-are-we-designing-for/clients-and-project-owners/how-to-present-ideas/2
         section#how-to-present-ideas-3(data-background-image="/images/bad-presentation1.png")
-          include slides/who-are-we-designing-for/clients-and-project-owners/how-to-present-ideas/3
+          include slides--en/who-are-we-designing-for/clients-and-project-owners/how-to-present-ideas/3
         section#how-to-present-ideas-4(data-background-image="/images/meeting2.jpg")
-          include slides/who-are-we-designing-for/clients-and-project-owners/how-to-present-ideas/4
+          include slides--en/who-are-we-designing-for/clients-and-project-owners/how-to-present-ideas/4
         section#how-to-present-ideas-5(data-background-image="/images/bad-presentation3.png")
-          include slides/who-are-we-designing-for/clients-and-project-owners/how-to-present-ideas/5
+          include slides--en/who-are-we-designing-for/clients-and-project-owners/how-to-present-ideas/5
         section#how-to-present-ideas-6(data-background-image="/images/meeting3.jpg")
-          include slides/who-are-we-designing-for/clients-and-project-owners/how-to-present-ideas/6
+          include slides--en/who-are-we-designing-for/clients-and-project-owners/how-to-present-ideas/6
         section#how-to-present-ideas-7(data-background-image="/images/bad-presentation2.jpg")
-          include slides/who-are-we-designing-for/clients-and-project-owners/how-to-present-ideas/7
+          include slides--en/who-are-we-designing-for/clients-and-project-owners/how-to-present-ideas/7
         section#developers-1
-          include slides/who-are-we-designing-for/developers/1
+          include slides--en/who-are-we-designing-for/developers/1
         section#developers-2
-          include slides/who-are-we-designing-for/developers/2
+          include slides--en/who-are-we-designing-for/developers/2
         section#developers-3
-          include slides/who-are-we-designing-for/developers/3
+          include slides--en/who-are-we-designing-for/developers/3
         section#developers-4
-          include slides/who-are-we-designing-for/developers/4
+          include slides--en/who-are-we-designing-for/developers/4
         section#developers-5
-          include slides/who-are-we-designing-for/developers/5
+          include slides--en/who-are-we-designing-for/developers/5
         section#developers-6
-          include slides/who-are-we-designing-for/developers/6
+          include slides--en/who-are-we-designing-for/developers/6
         section#developers-7
-          include slides/who-are-we-designing-for/developers/7
+          include slides--en/who-are-we-designing-for/developers/7
         section#developers-8
-          include slides/who-are-we-designing-for/developers/8
+          include slides--en/who-are-we-designing-for/developers/8
         section#developers-9
-          include slides/who-are-we-designing-for/developers/9
+          include slides--en/who-are-we-designing-for/developers/9
         section#users-1
-          include slides/who-are-we-designing-for/users/1
+          include slides--en/who-are-we-designing-for/users/1
         section#users-2
-          include slides/who-are-we-designing-for/users/2
+          include slides--en/who-are-we-designing-for/users/2
         section#users-3
-          include slides/who-are-we-designing-for/users/3
+          include slides--en/who-are-we-designing-for/users/3
         section#users-4
-          include slides/who-are-we-designing-for/users/4
+          include slides--en/who-are-we-designing-for/users/4
         section#users-5
-          include slides/who-are-we-designing-for/users/5
+          include slides--en/who-are-we-designing-for/users/5
         section#users-6
-          include slides/who-are-we-designing-for/users/6
+          include slides--en/who-are-we-designing-for/users/6
         section#users-7
-          include slides/who-are-we-designing-for/users/7
+          include slides--en/who-are-we-designing-for/users/7
         section#users-8
-          include slides/who-are-we-designing-for/users/8
+          include slides--en/who-are-we-designing-for/users/8
         section#machines
-          include slides/who-are-we-designing-for/machines/1
+          include slides--en/who-are-we-designing-for/machines/1
         section#seo
-          include slides/who-are-we-designing-for/machines/seo/1
+          include slides--en/who-are-we-designing-for/machines/seo/1
         section#rich-snippets-and-meta-data
-          include slides/who-are-we-designing-for/machines/rich-snippets-and-meta-data/1
+          include slides--en/who-are-we-designing-for/machines/rich-snippets-and-meta-data/1
         section#the-web-design-process-1
-          include slides/the-web-design-process/1
+          include slides--en/the-web-design-process/1
         section#the-web-design-process-2
-          include slides/the-web-design-process/2
+          include slides--en/the-web-design-process/2
         section#collaboration-1
-          include slides/the-web-design-process/collaboration/1
+          include slides--en/the-web-design-process/collaboration/1
         section#collaboration-2
-          include slides/the-web-design-process/collaboration/2
+          include slides--en/the-web-design-process/collaboration/2
         section#empathy
-          include slides/the-web-design-process/collaboration/empathy/1
+          include slides--en/the-web-design-process/collaboration/empathy/1
         section#embracing-change
-          include slides/the-web-design-process/embracing-change/1
+          include slides--en/the-web-design-process/embracing-change/1
         section#iteration-1
-          include slides/the-web-design-process/iteration/1
+          include slides--en/the-web-design-process/iteration/1
         section#iteration-2
-          include slides/the-web-design-process/iteration/2
+          include slides--en/the-web-design-process/iteration/2
         section#iteration-3
-          include slides/the-web-design-process/iteration/3
+          include slides--en/the-web-design-process/iteration/3
         section#iteration-4
-          include slides/the-web-design-process/iteration/4
+          include slides--en/the-web-design-process/iteration/4
         section#iteration-5
-          include slides/the-web-design-process/iteration/5
+          include slides--en/the-web-design-process/iteration/5
         section#iteration-6
-          include slides/the-web-design-process/iteration/6
+          include slides--en/the-web-design-process/iteration/6
         section#iteration-7(data-background-image="/images/mind-blown.gif")
-          include slides/the-web-design-process/iteration/7
+          include slides--en/the-web-design-process/iteration/7
         section#incremental-design-1
-          include slides/the-web-design-process/incremental-design/1
+          include slides--en/the-web-design-process/incremental-design/1
         section#incremental-design-2
-          include slides/the-web-design-process/incremental-design/2
+          include slides--en/the-web-design-process/incremental-design/2
         section#incremental-design-3
-          include slides/the-web-design-process/incremental-design/3
+          include slides--en/the-web-design-process/incremental-design/3
         section#accessibility-1
-          include slides/the-web-design-process/accessibility/1
+          include slides--en/the-web-design-process/accessibility/1
         section#accessibility-2
-          include slides/the-web-design-process/accessibility/2
+          include slides--en/the-web-design-process/accessibility/2
         section#accessibility-3
-          include slides/the-web-design-process/accessibility/3
+          include slides--en/the-web-design-process/accessibility/3
         section#accessibility-4
-          include slides/the-web-design-process/accessibility/4
+          include slides--en/the-web-design-process/accessibility/4
         section#accessibility-5
-          include slides/the-web-design-process/accessibility/5
+          include slides--en/the-web-design-process/accessibility/5
         section#accessibility-6
-          include slides/the-web-design-process/accessibility/6
+          include slides--en/the-web-design-process/accessibility/6
         section#accessibility-7
-          include slides/the-web-design-process/accessibility/7
+          include slides--en/the-web-design-process/accessibility/7
         section#mood-boards-1
-          include slides/the-web-design-process/mood-boards/1
+          include slides--en/the-web-design-process/mood-boards/1
         section#mood-boards-2
-          include slides/the-web-design-process/mood-boards/2
+          include slides--en/the-web-design-process/mood-boards/2
         section#mood-boards-3
-          include slides/the-web-design-process/mood-boards/3
+          include slides--en/the-web-design-process/mood-boards/3
         section#mood-boards-4
-          include slides/the-web-design-process/mood-boards/4
+          include slides--en/the-web-design-process/mood-boards/4
         section#mood-boards-5
-          include slides/the-web-design-process/mood-boards/5
+          include slides--en/the-web-design-process/mood-boards/5
         section#wireframes-1
-          include slides/the-web-design-process/wireframes/1
+          include slides--en/the-web-design-process/wireframes/1
         section#wireframes-2
-          include slides/the-web-design-process/wireframes/2
+          include slides--en/the-web-design-process/wireframes/2
         section#wireframes-3
-          include slides/the-web-design-process/wireframes/3
+          include slides--en/the-web-design-process/wireframes/3
         section#wireframes-4
-          include slides/the-web-design-process/wireframes/4
+          include slides--en/the-web-design-process/wireframes/4
         section#wireframes-5(data-background-image="/images/wireframes.jpg")
-          include slides/the-web-design-process/wireframes/5
+          include slides--en/the-web-design-process/wireframes/5
         section#colours-1
-          include slides/the-web-design-process/colours/1
+          include slides--en/the-web-design-process/colours/1
         section#colours-2
-          include slides/the-web-design-process/colours/2
+          include slides--en/the-web-design-process/colours/2
         section#colours-3
-          include slides/the-web-design-process/colours/3
+          include slides--en/the-web-design-process/colours/3
         section#typography
-          include slides/the-web-design-process/typography/1
+          include slides--en/the-web-design-process/typography/1
         section#typefaces-1
-          include slides/the-web-design-process/typography/typefaces/1
+          include slides--en/the-web-design-process/typography/typefaces/1
         section#typefaces-2
-          include slides/the-web-design-process/typography/typefaces/2
+          include slides--en/the-web-design-process/typography/typefaces/2
         section#typefaces-3
-          include slides/the-web-design-process/typography/typefaces/3
+          include slides--en/the-web-design-process/typography/typefaces/3
         section#typefaces-4
-          include slides/the-web-design-process/typography/typefaces/4
+          include slides--en/the-web-design-process/typography/typefaces/4
         section#typefaces-5
-          include slides/the-web-design-process/typography/typefaces/5
+          include slides--en/the-web-design-process/typography/typefaces/5
         section#typefaces-6
-          include slides/the-web-design-process/typography/typefaces/6
+          include slides--en/the-web-design-process/typography/typefaces/6
         section#font-styles-1
-          include slides/the-web-design-process/typography/font-styles/1
+          include slides--en/the-web-design-process/typography/font-styles/1
         section#font-styles-2
-          include slides/the-web-design-process/typography/font-styles/2
+          include slides--en/the-web-design-process/typography/font-styles/2
         section#font-styles-3
-          include slides/the-web-design-process/typography/font-styles/3
+          include slides--en/the-web-design-process/typography/font-styles/3
         section#font-styles-4
-          include slides/the-web-design-process/typography/font-styles/4
+          include slides--en/the-web-design-process/typography/font-styles/4
         section#font-styles-5
-          include slides/the-web-design-process/typography/font-styles/5
+          include slides--en/the-web-design-process/typography/font-styles/5
         section#font-styles-6
-          include slides/the-web-design-process/typography/font-styles/6
+          include slides--en/the-web-design-process/typography/font-styles/6
         section#font-styles-7
-          include slides/the-web-design-process/typography/font-styles/7
+          include slides--en/the-web-design-process/typography/font-styles/7
         section#font-styles-8
-          include slides/the-web-design-process/typography/font-styles/8
+          include slides--en/the-web-design-process/typography/font-styles/8
         section#base-font-size-1
-          include slides/the-web-design-process/typography/base-font-size/1
+          include slides--en/the-web-design-process/typography/base-font-size/1
         section#base-font-size-2
-          include slides/the-web-design-process/typography/base-font-size/2
+          include slides--en/the-web-design-process/typography/base-font-size/2
         section#base-font-size-3
-          include slides/the-web-design-process/typography/base-font-size/3
+          include slides--en/the-web-design-process/typography/base-font-size/3
         section#other-font-sizes-1
-          include slides/the-web-design-process/typography/other-font-sizes/1
+          include slides--en/the-web-design-process/typography/other-font-sizes/1
         section#other-font-sizes-2
-          include slides/the-web-design-process/typography/other-font-sizes/2
+          include slides--en/the-web-design-process/typography/other-font-sizes/2
         section#other-font-sizes-3
-          include slides/the-web-design-process/typography/other-font-sizes/3
+          include slides--en/the-web-design-process/typography/other-font-sizes/3
         section#other-font-sizes-4
-          include slides/the-web-design-process/typography/other-font-sizes/4
+          include slides--en/the-web-design-process/typography/other-font-sizes/4
         section#baseline-grid-1
-          include slides/the-web-design-process/typography/baseline-grid/1
+          include slides--en/the-web-design-process/typography/baseline-grid/1
         section#baseline-grid-2
-          include slides/the-web-design-process/typography/baseline-grid/2
+          include slides--en/the-web-design-process/typography/baseline-grid/2
         section#baseline-grid-3
-          include slides/the-web-design-process/typography/baseline-grid/3
+          include slides--en/the-web-design-process/typography/baseline-grid/3
         section#typographic-hierarchy-1
-          include slides/the-web-design-process/typography/typographic-hierarchy/1
+          include slides--en/the-web-design-process/typography/typographic-hierarchy/1
         section#typographic-hierarchy-2
-          include slides/the-web-design-process/typography/typographic-hierarchy/2
+          include slides--en/the-web-design-process/typography/typographic-hierarchy/2
         section#typographic-hierarchy-3
-          include slides/the-web-design-process/typography/typographic-hierarchy/3
+          include slides--en/the-web-design-process/typography/typographic-hierarchy/3
         section#base-typographic-styles-1
-          include slides/the-web-design-process/typography/base-typographic-styles/1
+          include slides--en/the-web-design-process/typography/base-typographic-styles/1
         section#base-typographic-styles-2
-          include slides/the-web-design-process/typography/base-typographic-styles/2
+          include slides--en/the-web-design-process/typography/base-typographic-styles/2
         section#headers-1
-          include slides/the-web-design-process/typography/base-typographic-styles/headers/1
+          include slides--en/the-web-design-process/typography/base-typographic-styles/headers/1
         section#headers-2
-          include slides/the-web-design-process/typography/base-typographic-styles/headers/2
+          include slides--en/the-web-design-process/typography/base-typographic-styles/headers/2
         section#headers-3
-          include slides/the-web-design-process/typography/base-typographic-styles/headers/3
+          include slides--en/the-web-design-process/typography/base-typographic-styles/headers/3
         section#typography-for-custom-components-1
-          include slides/the-web-design-process/typography/typography-for-custom-components/1
+          include slides--en/the-web-design-process/typography/typography-for-custom-components/1
         section#typography-for-custom-components-2
-          include slides/the-web-design-process/typography/typography-for-custom-components/2
+          include slides--en/the-web-design-process/typography/typography-for-custom-components/2
         section#typography-for-custom-components-3
-          include slides/the-web-design-process/typography/typography-for-custom-components/3
+          include slides--en/the-web-design-process/typography/typography-for-custom-components/3
         section#grid-1(data-background-image="/images/grid2.png")
-          include slides/the-web-design-process/grid/1
+          include slides--en/the-web-design-process/grid/1
         section#grid-2
-          include slides/the-web-design-process/grid/2
+          include slides--en/the-web-design-process/grid/2
         section#grid-3
-          include slides/the-web-design-process/grid/3
+          include slides--en/the-web-design-process/grid/3
         section#grid-4
-          include slides/the-web-design-process/grid/4
+          include slides--en/the-web-design-process/grid/4
         section#grid-5
-          include slides/the-web-design-process/grid/5
+          include slides--en/the-web-design-process/grid/5
         section#grid-6
-          include slides/the-web-design-process/grid/6
+          include slides--en/the-web-design-process/grid/6
         section#grid-7
-          include slides/the-web-design-process/grid/7
+          include slides--en/the-web-design-process/grid/7
         section#grid-8
-          include slides/the-web-design-process/grid/8
+          include slides--en/the-web-design-process/grid/8
         section#images-1
-          include slides/the-web-design-process/images/1
+          include slides--en/the-web-design-process/images/1
         section#images-2
-          include slides/the-web-design-process/images/2
+          include slides--en/the-web-design-process/images/2
         section#images-3
-          include slides/the-web-design-process/images/3
+          include slides--en/the-web-design-process/images/3
         section#images-4
-          include slides/the-web-design-process/images/4
+          include slides--en/the-web-design-process/images/4
         section#art-direction-1
-          include slides/the-web-design-process/images/art-direction/1
+          include slides--en/the-web-design-process/images/art-direction/1
         section#art-direction-2
-          include slides/the-web-design-process/images/art-direction/2
+          include slides--en/the-web-design-process/images/art-direction/2
         section#icons-1
-          include slides/the-web-design-process/icons/1
+          include slides--en/the-web-design-process/icons/1
         section#icons-2
-          include slides/the-web-design-process/icons/2
+          include slides--en/the-web-design-process/icons/2
         section#icons-3
-          include slides/the-web-design-process/icons/3
+          include slides--en/the-web-design-process/icons/3
         section#icons-4
-          include slides/the-web-design-process/icons/4
+          include slides--en/the-web-design-process/icons/4
         section#icons-5
-          include slides/the-web-design-process/icons/5
+          include slides--en/the-web-design-process/icons/5
         section#base-element-styles-1
-          include slides/the-web-design-process/base-element-styles/1
+          include slides--en/the-web-design-process/base-element-styles/1
         section#base-element-styles-2
-          include slides/the-web-design-process/base-element-styles/2
+          include slides--en/the-web-design-process/base-element-styles/2
         section#base-element-styles-3
-          include slides/the-web-design-process/base-element-styles/3
+          include slides--en/the-web-design-process/base-element-styles/3
         section#custom-components-1
-          include slides/the-web-design-process/custom-components/1
+          include slides--en/the-web-design-process/custom-components/1
         section#custom-components-2
-          include slides/the-web-design-process/custom-components/2
+          include slides--en/the-web-design-process/custom-components/2
         section#custom-components-3
-          include slides/the-web-design-process/custom-components/3
+          include slides--en/the-web-design-process/custom-components/3
         section#custom-components-4
-          include slides/the-web-design-process/custom-components/4
+          include slides--en/the-web-design-process/custom-components/4
+        section#custom-components-5
+          include slides--en/the-web-design-process/custom-components/5
         section#style-tiles-1
-          include slides/the-web-design-process/style-tiles/1
+          include slides--en/the-web-design-process/style-tiles/1
         section#style-tiles-2
-          include slides/the-web-design-process/style-tiles/2
+          include slides--en/the-web-design-process/style-tiles/2
         section#style-tiles-3
-          include slides/the-web-design-process/style-tiles/3
+          include slides--en/the-web-design-process/style-tiles/3
         section#style-tiles-4
-          include slides/the-web-design-process/style-tiles/4
+          include slides--en/the-web-design-process/style-tiles/4
         section#style-tiles-5
-          include slides/the-web-design-process/style-tiles/5
+          include slides--en/the-web-design-process/style-tiles/5
         section#style-tiles-6
-          include slides/the-web-design-process/style-tiles/6
+          include slides--en/the-web-design-process/style-tiles/6
         section#style-tiles-7
-          include slides/the-web-design-process/style-tiles/7
+          include slides--en/the-web-design-process/style-tiles/7
         section#animation-1
-          include slides/the-web-design-process/animation/1
+          include slides--en/the-web-design-process/animation/1
         section#animation-2
-          include slides/the-web-design-process/animation/2
+          include slides--en/the-web-design-process/animation/2
         section#animation-3
-          include slides/the-web-design-process/animation/3
+          include slides--en/the-web-design-process/animation/3
         section#animation-4
-          include slides/the-web-design-process/animation/4
+          include slides--en/the-web-design-process/animation/4
         section#animation-5
-          include slides/the-web-design-process/animation/5
+          include slides--en/the-web-design-process/animation/5
         section#animation-6
-          include slides/the-web-design-process/animation/6
+          include slides--en/the-web-design-process/animation/6
         section#animation-7
-          include slides/the-web-design-process/animation/7
+          include slides--en/the-web-design-process/animation/7
         section#animation-8
-          include slides/the-web-design-process/animation/8
+          include slides--en/the-web-design-process/animation/8
         section#print-styles-1
-          include slides/the-web-design-process/print-styles/1
+          include slides--en/the-web-design-process/print-styles/1
         section#print-styles-2
-          include slides/the-web-design-process/print-styles/2
+          include slides--en/the-web-design-process/print-styles/2
         section#tools-1
-          include slides/the-web-design-process/tools/1
+          include slides--en/the-web-design-process/tools/1
         section#tools-2
-          include slides/the-web-design-process/tools/2
+          include slides--en/the-web-design-process/tools/2
         section#tools-3
-          include slides/the-web-design-process/tools/3
+          include slides--en/the-web-design-process/tools/3
         section#tools-4
-          include slides/the-web-design-process/tools/4
+          include slides--en/the-web-design-process/tools/4
         section#web-design-deliverables-1
-          include slides/web-design-deliverables/1
+          include slides--en/web-design-deliverables/1
         section#web-design-deliverables-2
-          include slides/web-design-deliverables/2
+          include slides--en/web-design-deliverables/2
         section#web-design-deliverables-3
-          include slides/web-design-deliverables/3
+          include slides--en/web-design-deliverables/3
         section#web-design-deliverables-4
-          include slides/web-design-deliverables/4
+          include slides--en/web-design-deliverables/4
         section#web-design-deliverables-5
-          include slides/web-design-deliverables/5
+          include slides--en/web-design-deliverables/5
         section#web-design-deliverables-6
-          include slides/web-design-deliverables/6
+          include slides--en/web-design-deliverables/6
         section#web-design-deliverables-7
-          include slides/web-design-deliverables/7
+          include slides--en/web-design-deliverables/7
         section#web-design-deliverables-8
-          include slides/web-design-deliverables/8
+          include slides--en/web-design-deliverables/8
         section#the-advantages-of-a-design-style-guide-1
-          include slides/web-design-deliverables/the-advantages-of-a-design-style-guide/1
+          include slides--en/web-design-deliverables/the-advantages-of-a-design-style-guide/1
         section#the-advantages-of-a-design-style-guide-2
-          include slides/web-design-deliverables/the-advantages-of-a-design-style-guide/2
+          include slides--en/web-design-deliverables/the-advantages-of-a-design-style-guide/2
         section#the-advantages-of-a-design-style-guide-3
-          include slides/web-design-deliverables/the-advantages-of-a-design-style-guide/3
+          include slides--en/web-design-deliverables/the-advantages-of-a-design-style-guide/3
         section#the-advantages-of-a-design-style-guide-4
-          include slides/web-design-deliverables/the-advantages-of-a-design-style-guide/4
+          include slides--en/web-design-deliverables/the-advantages-of-a-design-style-guide/4
         section#the-advantages-of-a-design-style-guide-5
-          include slides/web-design-deliverables/the-advantages-of-a-design-style-guide/5
+          include slides--en/web-design-deliverables/the-advantages-of-a-design-style-guide/5
         section#the-advantages-of-a-design-style-guide-6
-          include slides/web-design-deliverables/the-advantages-of-a-design-style-guide/6
+          include slides--en/web-design-deliverables/the-advantages-of-a-design-style-guide/6
         section#the-advantages-of-a-design-style-guide-7
-          include slides/web-design-deliverables/the-advantages-of-a-design-style-guide/7
+          include slides--en/web-design-deliverables/the-advantages-of-a-design-style-guide/7
         section#the-advantages-of-a-design-style-guide-8
-          include slides/web-design-deliverables/the-advantages-of-a-design-style-guide/8
+          include slides--en/web-design-deliverables/the-advantages-of-a-design-style-guide/8
         section#web-design-pitfalls-1
-          include slides/web-design-pitfalls/1
+          include slides--en/web-design-pitfalls/1
         section#web-design-pitfalls-2
-          include slides/web-design-pitfalls/2
+          include slides--en/web-design-pitfalls/2
         section#language-and-communication-issues-1
-          include slides/web-design-pitfalls/language-and-communication-issues/1
+          include slides--en/web-design-pitfalls/language-and-communication-issues/1
         section#language-and-communication-issues-2
-          include slides/web-design-pitfalls/language-and-communication-issues/2
+          include slides--en/web-design-pitfalls/language-and-communication-issues/2
         section#language-and-communication-issues-3
-          include slides/web-design-pitfalls/language-and-communication-issues/3
+          include slides--en/web-design-pitfalls/language-and-communication-issues/3
         section#large-high-fidelity-mockups
-          include slides/web-design-pitfalls/large-high-fidelity-mockups/1
+          include slides--en/web-design-pitfalls/large-high-fidelity-mockups/1
         section#why-full-page-mockups-are-bad-1
-          include slides/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/1
+          include slides--en/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/1
         section#why-full-page-mockups-are-bad-2
-          include slides/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/2
+          include slides--en/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/2
         section#why-full-page-mockups-are-bad-3
-          include slides/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/3
+          include slides--en/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/3
         section#why-full-page-mockups-are-bad-4
-          include slides/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/4
+          include slides--en/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/4
         section#why-full-page-mockups-are-bad-5
-          include slides/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/5
+          include slides--en/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/5
         section#why-full-page-mockups-are-bad-6
-          include slides/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/6
+          include slides--en/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/6
         section#why-full-page-mockups-are-bad-7
-          include slides/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/7
+          include slides--en/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/7
         section#why-full-page-mockups-are-bad-8
-          include slides/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/8
+          include slides--en/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/8
         section#why-full-page-mockups-are-bad-9
-          include slides/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/9
+          include slides--en/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/9
         section#why-full-page-mockups-are-bad-10
-          include slides/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/10
+          include slides--en/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/10
         section#why-full-page-mockups-are-bad-11
-          include slides/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/11
+          include slides--en/web-design-pitfalls/large-high-fidelity-mockups/why-full-page-mockups-are-bad/11
         section#fixed-sizes-1
-          include slides/web-design-pitfalls/fixed-sizes/1
+          include slides--en/web-design-pitfalls/fixed-sizes/1
         section#fixed-sizes-2
-          include slides/web-design-pitfalls/fixed-sizes/2
+          include slides--en/web-design-pitfalls/fixed-sizes/2
         section#fixed-sizes-3
-          include slides/web-design-pitfalls/fixed-sizes/3
+          include slides--en/web-design-pitfalls/fixed-sizes/3
         section#what-next-1
-          include slides/what-next/1
+          include slides--en/what-next/1
         section#what-next-2
-          include slides/what-next/2
+          include slides--en/what-next/2
         section#what-next-3
-          include slides/what-next/3
+          include slides--en/what-next/3
         section#what-next-4
-          include slides/what-next/4
+          include slides--en/what-next/4
         section#what-next-5
-          include slides/what-next/5
+          include slides--en/what-next/5
         section#summary-1
-          include slides/summary/1
+          include slides--en/summary/1
         section#summary-2
-          include slides/summary/2
+          include slides--en/summary/2
         section#summary-3
-          include slides/summary/3
+          include slides--en/summary/3
         section#summary-4
-          include slides/summary/4
+          include slides--en/summary/4
         section#thanks
-          include slides/summary/thanks/1
+          include slides--en/summary/thanks/1
         section#how-to-contribute
-          include slides/summary/how-to-contribute/1
+          include slides--en/summary/how-to-contribute/1
         section#fin
-          include slides/summary/fin/1
+          include slides--en/summary/fin/1
 
     
     script(src="main.min.js")
