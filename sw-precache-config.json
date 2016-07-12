@@ -1,0 +1,8 @@
+{
+  "staticFileGlobs": [
+    "main.min.css",
+    "main.min.js",
+    "index.html",
+    "images/*.{js,html,css,png,jpg,gif,webp,ico,svg,xml,json}"
+  ]
+}

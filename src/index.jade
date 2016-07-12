@@ -2,7 +2,38 @@ doctype
 html(lang="en")
   head
     title How to Web Design
-    link(href="main.min.css", rel="stylesheet")
+
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="description", content="A presentation outlining web design considerations, best practice processes, deliverables and pitfalls.")
+    meta(name="keywords", content="web design, web, web projects, style guides, mood boards, wireframes, style tiles, typography, baseline grid, grid, layout, mockups, comps, design, content, web content, animation, usability, accessibility, performance, presentation")
+    meta(name="author", content="Darryl Snow")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="robots", content="index,follow")
+    meta(name="twitter:card", content="summary")
+    meta(name="twitter:site", content="@dazsnow")
+    meta(name="twitter:site:id", content="17756866")
+    meta(name="twitter:creator", content="@dazsnow")
+    meta(name="twitter:creator:id", content="17756866")
+    meta(name="twitter:url", property="og:url", content="https://howtoweb.design")
+    meta(name="twitter:title", property="og:title", content="How to Web Design")
+    meta(name="twitter:description", property="og:description", content="A presentation outlining web design considerations, best practice processes, deliverables and pitfalls.")
+    meta(name="twitter:image", property="og:image", content="https://howtoweb.design/images/how-to-web-design.jpg")
+
+    link(rel="canonical", href="https://howtoweb.design")
+    link(rel="me", href="mailto:darryl@yourweb.expert")
+    link(rel="me", href="sms:+8618669117013")
+    link(rel="me", href="https://github.com/darryl-snow")
+    link(rel="me", href="https://twitter.com/dazsnow")
+    link(rel="author", href="https://yourweb.expert/about/me", title="About Darryl Snow")
+    link(rel="shortcut icon", href="/images/icons/favicon.ico", type="image/ico")
+    link(rel="shortcut icon", href="/images/icons/favicon-96x96.png", type="image/png")
+    link(rel="apple-touch-icon", href="/images/icons/favicon-96x96.png", type="image/png")
+    link(rel="manifest", href="/manifest.json")
+
+    //- link(href="main.min.css", rel="stylesheet")
+    style
+      include ../main.min.css
     
     script.
       WebFontConfig = {
@@ -22,8 +53,8 @@ html(lang="en")
         }
       })();
 
-    script(async, defer, src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js")
-    link(rel="preconnect", crossorigin, href="https://fonts.googleapis.com/css?family=Raleway:100,300,600")
+    script(async, crossorigin="anonymous", defer, integrity="sha384-lN5TfD3NZM4jZQNnPZvggNwf0cQifyDyp09pFyiOrHXWNLOj43xGf2SnHO5K006r", src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js")
+    link(rel="preconnect", crossorigin="anonymous", href="https://fonts.googleapis.com/css?family=Raleway:100,300,600")
 
   body
 
@@ -686,4 +717,4 @@ html(lang="en")
           include slides--en/summary/fin/1
 
     
-    script(src="main.min.js")
+    script(asynch="true", defer="true", src="main.min.js")

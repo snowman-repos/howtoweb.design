@@ -1,13 +1,15 @@
 var express = require('express');
 var app = express();
 
+var secrets = require('./secrets.json');
+
 var compression = require('compression');
 var bodyParser = require ('body-parser');
 var cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');
 var path = require('path');
 var server = require('http').createServer(app);
-var stripe = require('stripe')('pk_live_102DFGBPzfPJw3yapvo2fSs6');
+var stripe = require('stripe')(secrets.key);
 
 // Config
 
@@ -27,7 +29,7 @@ app.post('/charge', function(req, res){
   var stripeToken = req.body.stripeToken;
 
   var charge = stripe.charges.create({
-    amount: 5000,
+    amount: 500,
     currency: 'usd',
     card: stripeToken,
     description: 'How to web design donation'

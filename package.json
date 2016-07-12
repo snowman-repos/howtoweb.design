@@ -5,7 +5,7 @@
     "stripe": "^4.7.0",
     "whatwg-fetch": "^1.0.0"
   },
-  "description": "A presentation for remote design teams outlining best practice design deliverables required for front-end development",
+  "description": "A presentation outlining web design considerations, best practice processes, deliverables and pitfalls.",
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "babel-cli": "^6.9.0",
@@ -20,17 +20,19 @@
     "cssnano-cli": "^1.0.4",
     "express": "^4.14.0",
     "http": "0.0.0",
+    "imagemin-cli": "^3.0.0",
     "jade": "^1.11.0",
     "method-override": "^2.3.6",
     "path": "^0.12.7",
     "stylus": "^0.54.5",
+    "sw-precache": "^3.2.0",
     "uglify-js": "^2.6.2"
   },
   "license": "MIT",
   "main": "./index.html",
   "name": "web-design-deliverables",
   "scripts": {
-    "compile": "jade ./src/index.jade --out ./ && stylus ./src/main.styl --out ./ --include-css && autoprefixer-cli -o ./main.css ./main.css && cssnano ./main.css ./main.min.css && browserify ./src/main.js --o ./main.js -t [ babelify --presets [ es2015 ] ] && uglifyjs ./main.js -o ./main.min.js",
+    "compile": "stylus ./src/main.styl --out ./ --include-css && autoprefixer-cli -o ./main.css ./main.css && cssnano ./main.css ./main.min.css && jade ./src/index.jade --out ./ && browserify ./src/main.js --o ./main.js -t [ babelify --presets [ es2015 ] ] && uglifyjs ./main.js -o ./main.min.js && imagemin images/* --out-dir=images && sw-precache --config=./sw-precache-config.json --verbose --no-handle-fetch",
     "serve": "npm start && python -m SimpleHTTPServer",
     "start": "NODE_ENV=production && pm2 restart server.js --name howtoweb.design"
   },

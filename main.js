@@ -5194,34 +5194,39 @@ require('whatwg-fetch');
 
 var BuyMeADrink = function () {
   function BuyMeADrink() {
+    var _this = this;
+
     _classCallCheck(this, BuyMeADrink);
 
     this.el = {
       button: document.querySelector('.js-buy-me-a-drink-button')
     };
 
-    this.handler = StripeCheckout.configure({
-      key: 'pk_live_102DFGBPzfPJw3yapvo2fSs6',
-      image: '/images/darryl-snow.jpg',
-      locale: 'auto',
-      token: function token(_token) {
-        fetch('/charge', {
-          method: 'post',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            stripeToken: _token.id
-          })
-        }).then(function (response) {
-          if (response.status === 500) throw error;else return response;
-        }).then(function (data) {
-          console.log(data);
-        }).catch(function (err) {
-          console.error(err);
-        });
-      }
+    this.waitForStripeScriptToLoad('StripeCheckout', function () {
+
+      _this.handler = StripeCheckout.configure({
+        key: 'pk_live_102DFGBPzfPJw3yapvo2fSs6',
+        image: '/images/darryl-snow.jpg',
+        locale: 'auto',
+        token: function token(_token) {
+          fetch('/charge', {
+            method: 'post',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              stripeToken: _token.id
+            })
+          }).then(function (response) {
+            if (response.status === 500) throw error;else return response;
+          }).then(function (data) {
+            console.log(data);
+          }).catch(function (err) {
+            console.error(err);
+          });
+        }
+      });
     });
 
     this.addEventListeners();
@@ -5230,13 +5235,13 @@ var BuyMeADrink = function () {
   _createClass(BuyMeADrink, [{
     key: 'addEventListeners',
     value: function addEventListeners() {
-      var _this = this;
+      var _this2 = this;
 
       this.el.button.addEventListener('click', function (e) {
 
         e.preventDefault();
 
-        _this.handler.open({
+        _this2.handler.open({
           name: 'Darryl Snow',
           description: 'Buy me a drink',
           currency: 'usd',
@@ -5246,8 +5251,20 @@ var BuyMeADrink = function () {
 
       window.addEventListener('popstate', function (e) {
 
-        _this.handler.close();
+        _this2.handler.close();
       });
+    }
+  }, {
+    key: 'waitForStripeScriptToLoad',
+    value: function waitForStripeScriptToLoad(name, callback) {
+
+      var interval = setInterval(function () {
+
+        if (window[name]) {
+          callback();
+          clearInterval(interval);
+        }
+      }, 100);
     }
   }]);
 
