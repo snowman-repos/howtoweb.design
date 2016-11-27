@@ -5243,9 +5243,9 @@ var BuyMeADrink = function () {
 
         _this2.handler.open({
           name: 'Darryl Snow',
-          description: 'Hello Thea',
+          description: 'Buy me a drink',
           currency: 'usd',
-          amount: 9700
+          amount: 500
         });
       });
 
