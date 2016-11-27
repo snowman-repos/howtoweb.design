@@ -29,7 +29,7 @@ app.post('/charge', function(req, res){
   var stripeToken = req.body.stripeToken;
 
   var charge = stripe.charges.create({
-    amount: 500,
+    amount: 9700,
     currency: 'usd',
     card: stripeToken,
     description: 'How to web design donation'
